@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Variables CSS y Temas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Botón flotante para alternar el modo oscuro -->
+    <button class="btn-toggle-tema" id="btnTema" onclick="toggleModoOscuro()">🌙 Modo Oscuro</button>
+
+    <main class="contenedor-formulario">
+        <h2>Contacto</h2>
+        <p>Completá el formulario para enviarnos tu consulta.</p>
+
+        <form action="#" method="POST">
+            <div class="grupo-campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+        </form>
+    </main>
+
+    <!-- Script para alternar el modo oscuro en la raíz (html) -->
+    <script>
+        function toggleModoOscuro() {
+            document.documentElement.classList.toggle('dark-mode');
+            const boton = document.getElementById('btnTema');
+            if (document.documentElement.classList.contains('dark-mode')) {
+                boton.textContent = "☀️ Modo Claro";
+            } else {
+                boton.textContent = "🌙 Modo Oscuro";
+            }
+        }
+    </script>
+
+</body>
+</html>

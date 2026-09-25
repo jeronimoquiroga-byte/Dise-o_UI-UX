@@ -1,0 +1,90 @@
+/* Reseteo general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e8ed;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* --- Estilos de la lista y enlaces --- */
+.lista-enlaces {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-enlaces a {
+    display: block;
+    padding: 12px 18px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* --- Pseudo-elemento ::before (Agrega una flecha decorativa a la izquierda) --- */
+.lista-enlaces a::before {
+    content: "› ";
+    color: #3498db;
+    font-weight: bold;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* --- Pseudo-clase 1: :hover (Efecto al pasar el cursor) --- */
+.lista-enlaces a:hover {
+    background-color: #ebf5fb;
+    color: #2980b9;
+    border-color: #3498db;
+    padding-left: 24px; /* Pequeno desplazamiento lateral moderno */
+}
+
+.lista-enlaces a:hover::before {
+    transform: translateX(3px);
+}
+
+/* --- Pseudo-clase 2: :nth-child() (Estiliza elementos especificos de la lista alternados) --- */
+.lista-enlaces li:nth-child(even) a {
+    background-color: #fcfcfc;
+}
+
+/* --- Pseudo-clase 3 adicional: :last-child --- */
+.lista-enlaces li:last-child a {
+    border-bottom: 2px solid #bdc3c7;
+}

@@ -1,0 +1,24 @@
+/* Estilos basicos para el ejercicio 5 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    margin: 40px;
+    line-height: 1.6;
+}
+
+/* Modificamos especificamente el tamano y color del h1 como pide la consigna */
+h1 {
+    font-size: 2.5rem;
+    color: #1a252f;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #2980b9;
+}
+
+p {
+    font-size: 1.1rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 - Posicionamiento (Fixed y Absolute)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Practica de Posicionamiento CSS</h1>
+        <p>Demostracion de position: fixed y position: absolute con tooltips.</p>
+    </header>
+
+    <main class="contenido-largo">
+        <section class="seccion-ejemplo">
+            <h2>Seccion de Contenido 1</h2>
+            <p>Hace scroll hacia abajo para ver como el boton flotante permanece fijo en la esquina inferior derecha de la pantalla.</p>
+        </section>
+
+        <!-- Contenedor con tooltip interactivo -->
+        <div class="contenedor-tooltip">
+            <button class="btn-info">Pasa el cursor por aca
+                <span class="tooltip">¡Hola! Este es un tooltip con position: absolute.</span>
+            </button>
+        </div>
+
+        <section class="seccion-ejemplo">
+            <h2>Seccion de Contenido 2</h2>
+            <p>Esta seccion sirve para extender la pagina y permitir el desplazamiento vertical (scroll). El posicionamiento fijo nos permite mantener elementos siempre visibles en la pantalla sin importar cuanto bajemos.</p>
+            <p>Es una tecnica muy utilizada para botones de ayuda, menus flotantes o flechas de retorno al inicio.</p>
+        </section>
+
+        <section class="seccion-ejemplo">
+            <h2>Seccion de Contenido 3</h2>
+            <p>Por otro lado, el posicionamiento absoluto requiere de un elemento contenedor que tenga una posicion definida (como relative) para poder ubicarse de manera precisa respecto a el, tal como lo hace el cartel del tooltip.</p>
+            <p>Esto nos da un control absoluto sobre el diseno y la interfaz de usuario.</p>
+        </section>
+
+        <section class="seccion-ejemplo">
+            <h2>Seccion de Contenido 4 (Final)</h2>
+            <p>¡Aca termina el contenido largo! Ahora deberias poder usar la barra lateral del navegador para subir y bajar, y ver que el boton azul con la flecha nunca se mueve de su lugar.</p>
+        </section>
+    </main>
+
+    <!-- Boton "Volver arriba" fijo -->
+    <a href="#" class="btn-volver-arriba" id="arriba">▲</a>
+
+</body>
+</html>

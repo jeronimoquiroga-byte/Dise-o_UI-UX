@@ -1,0 +1,149 @@
+/* Definición de variables globales en :root */
+:root {
+    --color-primario: #3498db;
+    --color-secundario: #2c3e50;
+    --color-fondo: #f4f6f8;
+    --color-tarjeta: #ffffff;
+    --color-texto: #333333;
+    --color-texto-secundario: #666666;
+    --color-input-bg: #f8fafc;
+    --color-borde: #cbd5e1;
+    --espaciado-general: 20px;
+    --borde-radio: 10px;
+}
+
+/* Simulación de modo oscuro a nivel de la raíz */
+html.dark-mode {
+    --color-primario: #3b82f6;
+    --color-secundario: #f8fafc;
+    --color-fondo: #0f172a;
+    --color-tarjeta: #1e293b;
+    --color-texto: #f8fafc;
+    --color-texto-secundario: #94a3b8;
+    --color-input-bg: #334155;
+    --color-borde: #475569;
+}
+
+/* Reseteo general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo); /* Propiedad 1 */
+    color: var(--color-texto);          /* Propiedad 2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedor principal de la tarjeta de formulario */
+.contenedor-formulario {
+    background-color: var(--color-tarjeta); /* Propiedad 3 */
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: var(--borde-radio);     /* Propiedad 4 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-borde);  /* Propiedad 5 */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contenedor-formulario h2 {
+    color: var(--color-secundario);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.contenedor-formulario p {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* Agrupamiento de campos */
+.grupo-campo {
+    margin-bottom: var(--espaciado-general);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    margin-bottom: 8px;
+}
+
+/* Estilos de los inputs y textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-texto);
+    background-color: var(--color-input-bg);
+    transition: all 0.3s ease;
+}
+
+input:hover, textarea:hover {
+    border-color: var(--color-primario);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    background-color: var(--color-tarjeta);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Botón de envío estilizado */
+.btn-enviar {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    filter: brightness(0.9);
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* Botón flotante para cambiar de tema */
+.btn-toggle-tema {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-toggle-tema:hover {
+    border-color: var(--color-primario);
+}
