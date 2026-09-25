@@ -1,0 +1,123 @@
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar {
+    background-color: #0f172a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Ocultamos el checkbox real */
+.menu-checkbox {
+    display: none;
+}
+
+/* Estilo del botón hamburguesa (el label) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   ENLACES DEL MENÚ (COLAPSADOS POR DEFECTO)
+   ========================================== */
+.nav-links {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;          /* Comienza cerrado (colapsado) */
+    overflow: hidden;       /* Oculta los links cuando está en 0 */
+    transition: max-height 0.4s ease-in-out; /* Transición fluida */
+}
+
+.nav-links li {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links li a {
+    display: block;
+    padding: 12px 0;
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================
+   EL TRUCO CLAVE: SELECTOR :checked + ~
+   ========================================== */
+/* Al tildar el checkbox oculto, se expande la altura del menú hermano */
+.menu-checkbox:checked ~ .nav-links {
+    max-height: 250px; 
+}
+
+/* ==========================================
+   MEDIA QUERY PARA ESCRITORIO (Pantallas grandes)
+   ========================================== */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Se oculta el botón hamburguesa en compu */
+    }
+
+    .nav-links {
+        max-height: none !important; /* El menú queda siempre abierto en escritorio */
+        flex-direction: row;
+        width: auto;
+    }
+
+    .nav-links li {
+        border-top: none;
+        margin-left: 20px;
+    }
+
+    .nav-links li a {
+        padding: 5px 10px;
+    }
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+}

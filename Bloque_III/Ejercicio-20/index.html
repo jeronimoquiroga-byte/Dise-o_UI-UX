@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20 - Proyecto Integrador: Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR FIJA CON ENLACES A LAS SECCIONES -->
+    <header class="header-principal">
+        <nav class="navbar">
+            <div class="logo">MiMarca</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. SECCIÓN HERO CON IMAGEN DE FONDO -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Transformá tus ideas digitales en realidad</h1>
+                <p>Soluciones modernas, diseño responsivo y código optimizado para llevar tu proyecto al siguiente nivel.</p>
+                <a href="#servicios" class="btn-hero">Conocé más</a>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE SERVICIOS / PRODUCTOS EN GRID -->
+        <section id="servicios" class="servicios-section">
+            <h2>Nuestros Servicios</h2>
+            <p class="section-subtitle">Diseñados para potenciar tu negocio online</p>
+            
+            <div class="grid-servicios">
+                <article class="card-servicio">
+                    <h3>Diseño UX/UI</h3>
+                    <p>Interfaces intuitivas, atractivas y centradas en la experiencia de usuario.</p>
+                </article>
+                <article class="card-servicio">
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios rápidos, adaptables a cualquier dispositivo y con código limpio.</p>
+                </article>
+                <article class="card-servicio">
+                    <h3>Optimización SEO</h3>
+                    <p>Mejoras de posicionamiento para que tus clientes te encuentren fácilmente.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE TESTIMONIOS EN CARRUSEL SIMPLE (con scroll-snap) -->
+        <section id="testimonios" class="testimonios-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            
+            <div class="carrusel-testimonios">
+                <div class="testimonio-card">
+                    <p>"Excelente atención y resultados impecables. Nuestra web cambió por completo."</p>
+                    <span class="cliente">— Sofía Gómez</span>
+                </div>
+                <div class="testimonio-card">
+                    <p>"El diseño responsivo superó todas nuestras expectativas. Muy recomendable."</p>
+                    <span class="cliente">— Carlos Benítez</span>
+                </div>
+                <div class="testimonio-card">
+                    <p>"Rapidez, profesionalismo y excelentes prácticas en cada detalle del proyecto."</p>
+                    <span class="cliente">— Lucía Fernández</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FORMULARIO DE CONTACTO -->
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <p class="section-subtitle">¿Tenés un proyecto en mente? Escribinos</p>
+
+            <form class="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required placeholder="tu@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="4" required placeholder="Contanos sobre tu proyecto..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 6. FOOTER -->
+    <footer class="footer-principal">
+        <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

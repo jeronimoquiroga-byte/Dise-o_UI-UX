@@ -1,0 +1,114 @@
+/* ==========================================
+   ESTILOS GENERALES (Mobile First)
+   Por defecto (celulares): 1 sola columna y sidebar oculto
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* El contenedor principal en mobile pasa a una sola columna */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Consigna: en pantallas menores a 768px el sidebar desaparece */
+.sidebar {
+    display: none; 
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.footer {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   BREAKPOINT 1: Tablets y pantallas medias (>= 768px)
+   Aparece el sidebar y se organiza el layout en grid
+   ========================================== */
+@media (min-width: 768px) {
+    .sidebar {
+        display: block; /* Vuelve a aparecer el sidebar */
+        background-color: #334155;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 8px;
+    }
+
+    .sidebar ul li a {
+        color: #94a3b8;
+        text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+        color: #fff;
+    }
+
+    /* Definimos el layout de dos columnas para el contenido y el sidebar */
+    .grid-container {
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .header {
+        grid-column: 1 / -1; /* Ocupa todo el ancho arriba */
+    }
+
+    .sidebar {
+        grid-column: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 2 / 3;
+    }
+
+    .footer {
+        grid-column: 1 / -1; /* Ocupa todo el ancho abajo */
+    }
+}
+
+
+/* ==========================================
+   BREAKPOINT 2: Escritorio / Pantallas grandes (>= 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .main-content {
+        padding: 40px;
+    }
+}

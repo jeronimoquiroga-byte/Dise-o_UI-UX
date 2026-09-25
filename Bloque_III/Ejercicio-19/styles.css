@@ -1,0 +1,130 @@
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0f172a;
+    font-size: 1.5rem;
+}
+
+.step h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+/* ==========================================
+   CONTROL DE PASOS CON :target
+   ========================================== */
+.step-1 {
+    display: block;
+}
+
+.step-2 {
+    display: none;
+}
+
+/* Cuando hacemos clic en "Siguiente", se activa el ancla #step-2 */
+#step-2:target {
+    display: block;
+}
+
+#step-2:target ~ .step-1, 
+body:has(#step-2:target) .step-1 {
+    display: none;
+}
+
+/* ==========================================
+   ESTILOS DE CAMPOS Y VALIDACIÓN VISUAL
+   ========================================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Feedback visual con bordes rojos/verdes usando :valid e :invalid al escribir */
+.form-group input:focus:invalid {
+    border-color: #ef4444; 
+}
+
+.form-group input:focus:valid {
+    border-color: #22c55e; 
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+.botones-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-prev {
+    background-color: #64748b;
+}
+
+.btn-prev:hover {
+    background-color: #475569;
+}
